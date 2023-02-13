@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>cruds</title>
+    <link rel="stylesheet" href="curds.css">
+    <meta property="og:title" content="Cruds">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://Cruds">
+    <meta property="og:description" content="Products sytstem MANGMENT">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Cruds">
+</head>
+
+<body>
+    <div class="curds">
+        <div class="head">
+            <h2>CRUDS</h2>
+            <p> PRODUCTS MANGMENT SYSYTEM</p>
+        </div>
+        <div class="inputs">
+            <input type="text" placeholder="title" id="title" required>
+            <div class="price">
+                <input onkeyup="totalPrice()" type="number" placeholder="price" id="price" required>
+                <input onkeyup="totalPrice()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="totalPrice()" type="number" placeholder="ads" id="ads">
+                <input onkeyup="totalPrice()" type="number" placeholder="discount" id="discount">
+                <small onkeyup="totalPrice()" id="total"></small>
+            </div>
+            <input onblur="cleancount()" onkeyup="cleancount()" type="number" placeholder="count" id="count">
+            <input type="text" placeholder="catagory" id="catagory" required>
+            <button type="submit" id="Update">Update</button>
+            <button type="submit" onclick="createEle()" id="submit">Creat</button>
+
+        </div>
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onblur=" readData()" onkeyup="Search(this.value)" type="text" id="search" placeholder="search">
+                <div class="btnsearch">
+                    <button onclick="SerachBtn(this.id) " id="sreachTitle">Search by
+                        title</button>
+                    <button onclick="SerachBtn(this.id)" id="sreachCategory">Search by
+                        category</button>
+                </div>
+                <div id="delAll">
+
+                </div>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            <tbody id="tbodyy">
+            </tbody>
+        </table>
+    </div>
+    <script src="curds.js"></script>
+</body>
+
+</html>
