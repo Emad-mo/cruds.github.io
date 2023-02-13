@@ -62,7 +62,7 @@ function createEle() {
 
 
     localStorage.setItem("craetedData", JSON.stringify(createData))
-
+    deletAll()
     readData()
 }
 // clear inputs
